@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "lscmf"
+version = "0.2.0"
+description = "Performs large-scale CMF on flexible data layouts."
+authors = ["Felix Held <felix.held@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/cyianor/lscmf"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/cyianor/lscmf/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+numpy = "^1.23"
+scipy = "^1.9"
+scikit-learn = "^1.1.0"
+typing-extensions = { version = "^4.9.0", python = "<3.11" }
+
+[tool.ruff]
+line-length = 79
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
