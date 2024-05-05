@@ -204,6 +204,7 @@ def match_factors(
     use_lower_only: bool = True,
     use_nonmatch_upper: bool = True,
     nocomp_length1_nodes: bool = True,
+    require_match_lower_ge_nonmatch_upper: bool = True,
     lower_min: float = 0.0,
     lower_max: float = 1.0,
 ) -> MatchGraph:
@@ -296,6 +297,11 @@ def match_factors(
                 if use_nonmatch_upper:
                     matches = logical_and(
                         matches, nonmatch_upper_bound <= cos_match
+                    )
+
+                if require_match_lower_ge_nonmatch_upper:
+                    matches = logical_and(
+                        matches, nonmatch_upper_bound <= lower_bound
                     )
 
                 it = nditer(matches, flags=["multi_index"])

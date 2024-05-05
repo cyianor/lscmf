@@ -41,6 +41,7 @@ class LargeScaleCMF(BaseEstimator):
         "use_lower_only": ["boolean"],
         "use_nonmatch_upper": ["boolean"],
         "nocomp_length1_nodes": ["boolean"],
+        "require_match_lower_ge_nonmatch_upper": ["boolean"],
         "lower_min": [Interval(Real, 0, 1, closed="both")],
         "lower_max": [Interval(Real, 0, 1, closed="both")],
         "full_svd": ["boolean"],
@@ -52,6 +53,7 @@ class LargeScaleCMF(BaseEstimator):
         use_lower_only: bool = True,
         use_nonmatch_upper: bool = True,
         nocomp_length1_nodes: bool = True,
+        require_match_lower_ge_nonmatch_upper: bool = True,
         lower_min: float = 0.0,
         lower_max: float = 1.0,
         full_svd: bool = False,
@@ -60,6 +62,9 @@ class LargeScaleCMF(BaseEstimator):
         self.use_lower_only = use_lower_only
         self.use_nonmatch_upper = use_nonmatch_upper
         self.nocomp_length1_nodes = nocomp_length1_nodes
+        self.require_match_lower_ge_nonmatch_upper = (
+            require_match_lower_ge_nonmatch_upper
+        )
         self.lower_min = lower_min
         self.lower_max = lower_max
         self.full_svd = full_svd
@@ -103,6 +108,7 @@ class LargeScaleCMF(BaseEstimator):
             use_lower_only=self.use_lower_only,
             use_nonmatch_upper=self.use_nonmatch_upper,
             nocomp_length1_nodes=self.nocomp_length1_nodes,
+            require_match_lower_ge_nonmatch_upper=self.require_match_lower_ge_nonmatch_upper,
             lower_min=self.lower_min,
             lower_max=self.lower_max,
         )
