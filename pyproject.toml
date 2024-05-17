@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lscmf"
-version = "0.2.0"
+version = "0.2.1"
 description = "Performs large-scale CMF on flexible data layouts."
 authors = ["Felix Held <felix.held@gmail.com>"]
 license = "MIT"
