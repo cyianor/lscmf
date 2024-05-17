@@ -1,5 +1,5 @@
-from numpy.typing import NDArray
-from numpy import float64, diag, sum, sqrt
+from numpy.typing import ArrayLike
+from numpy import diag, sum, sqrt, atleast_1d
 from numpy.linalg import qr
 from numpy.random import Generator, default_rng
 from collections.abc import Hashable
@@ -12,7 +12,7 @@ def simulate(
     viewdims: dict[Hashable, int],
     factor_scales: dict[
         ViewDesc,
-        NDArray[float64],
+        ArrayLike,
     ],
     scales: dict[ViewDesc, float] | None = None,
     snr: float = 1.0,
@@ -20,6 +20,11 @@ def simulate(
 ):
     if rng is None:
         rng = default_rng()
+
+    # Check input
+    factor_scales = {
+        k: atleast_1d(v) for k, v in factor_scales.items()
+    }
 
     shapes = [s.shape for s in factor_scales.values()]
     assert all(
