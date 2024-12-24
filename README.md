@@ -4,10 +4,23 @@ This is a package implementing the data integration methodology described in
 ["Large-scale Data Integration using Matrix Denoising and
 Geometric Factor Matching" (Held, 2024, arXiv:2405.10036 \[stat.ME\])](https://arxiv.org/abs/2405.10036).
 
-To install the package run
+## Install development version
+
+To install the development version of the package run
+
 ```sh
 pip install git+https://github.com/cyianor/lscmf.git
 ```
+
+## Install stable version
+
+To install the stable version of the package run
+
+```sh
+pip install lscmf
+```
+
+## Usage example
 
 A simple usage example is shown below:
 
@@ -60,11 +73,10 @@ est.ds_
 
 
     {(0,
-      1): array([ 2.98687823,  0.        , -1.96015864,  0.        ,  2.47498787]),
+      1): array([-2.98687823,  0.        ,  1.96015864,  0.        ,  2.47498787]),
      (0,
       2): array([-2.78861131,  1.96604697,  0.        ,  0.        ,  0.        ]),
-     (1,
-      2): array([-1.13272996,  0.        ,  4.98917765, -1.00988163,  0.        ])}
+     (1, 2): array([1.13272996, 0.        , 4.98917765, 1.00988163, 0.        ])}
 
 
 

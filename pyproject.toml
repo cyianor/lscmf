@@ -36,8 +36,6 @@ dependencies = [
     "nbconvert",
     "matplotlib",
     "ruff",
-    "build",
-    "twine",
 ]
 
 [tool.ruff]

@@ -60,7 +60,7 @@ __all__ = [
     "LargeScaleCMF",
 ]
 
-from .__version__ import (
+from .__about__ import (
     __title__,
     __description__,
     __version__,
