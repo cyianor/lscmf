@@ -103,7 +103,7 @@ ax.set_title("View 1, Integrated factor 3, True factor 5");
 
 
     
-![png](README_files/README_5_1.png)
+![png](https://github.com/cyianor/lscmf/raw/v0.2.1/README_files/README_5_1.png)
     
 
 
