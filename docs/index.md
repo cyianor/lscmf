@@ -1,17 +1,21 @@
-# Welcome to MkDocs
+# Large-scale Collective Matrix Factorization (lsCMF)
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a package implementing the data integration methodology described in 
+["Large-scale Data Integration using Matrix Denoising and
+Geometric Factor Matching" (Held, 2024, arXiv:2405.10036 \[stat.ME\])](https://arxiv.org/abs/2405.10036).
 
-## Commands
+## Install development version
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+To install the development version of the package run
 
-## Project layout
+```sh
+pip install git+https://github.com/cyianor/lscmf.git
+```
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Install stable version
+
+To install the stable version of the package run
+
+```sh
+pip install lscmf
+```

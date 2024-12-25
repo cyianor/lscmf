@@ -32,19 +32,25 @@ path = "src/lscmf/__about__.py"
 
 [tool.hatch.envs.dev]
 dependencies = [
-    "mkdocs",
-    "mkdocstrings[python]",
-    "mkdocs-material",
-    "mkdocs-jupyter",
     "ipykernel",
     "nbconvert",
     "matplotlib",
     "ruff",
 ]
 
-[tool.hatch.envs.dev.scripts]
+[tool.hatch.envs.docs]
+dependencies = [
+    "mkdocs",
+    "mkdocstrings[python]",
+    "mkdocs-material",
+    "mkdocs-jupyter",
+    "matplotlib",
+]
+
+[tool.hatch.envs.docs.scripts]
+deploy = "mkdocs gh-deploy --clean --strict"
 build = "mkdocs build --clean --strict"
-serve = "mkdocs serve --dev-addr localhost:8000"
+serve = "JUPYTER_PLATFORM_DIRS=1 mkdocs serve --dev-addr localhost:8000"
 
 [tool.ruff]
 line-length = 79
